@@ -12,7 +12,9 @@ export class ProductDetailComponent implements OnInit {
 
   product;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
   }
