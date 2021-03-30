@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
+
 import { products } from "../products";
 
 @Component({
@@ -8,6 +9,8 @@ import { products } from "../products";
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
+
+  product;
 
   constructor() { }
 
