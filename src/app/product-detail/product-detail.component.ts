@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { products } from '../products';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -15,8 +16,14 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private cartService: CartService,
   ) { }
+
+    addToCart(product): void{
+      this.cartService.addToCart(product);
+      window.alert('Your product has been added to the cart!');
+    }
 
   backClicked(): void {
     this.location.back();
