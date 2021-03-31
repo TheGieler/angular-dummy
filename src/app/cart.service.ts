@@ -12,5 +12,9 @@ export class CartService {
     this.items.push(product)
   }
 
+  getItems(){
+    return this.items;
+  }
+
   constructor() { }
 }
