@@ -16,5 +16,10 @@ export class CartService {
     return this.items;
   }
 
+  clearCart(){
+    this.items = [];
+    return this.items;
+  }
+
   constructor() { }
 }
