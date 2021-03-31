@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Input } from '@angular/core';
-import { Product } from '../products';
 import { Output, EventEmitter } from '@angular/core';
+import { Location } from '@angular/common';
+
+import { Product } from '../products';
+
 
 @Component({
   selector: 'app-product-alerts',
@@ -16,9 +19,13 @@ export class ProductAlertsComponent implements OnInit {
   @Output()
   notify  = new EventEmitter();
 
-  constructor() { }
+  constructor(private location: Location) { }
+
+  backClicked(): void {
+    this.location.back();
+  }
 
   ngOnInit(): void {
-  }
+ }
 
 }
