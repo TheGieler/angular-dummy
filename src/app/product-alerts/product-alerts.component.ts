@@ -19,11 +19,8 @@ export class ProductAlertsComponent implements OnInit {
   @Output()
   notify  = new EventEmitter();
 
-  constructor(private location: Location) { }
+  constructor() { }
 
-  backClicked(): void {
-    this.location.back();
-  }
 
   ngOnInit(): void {
  }

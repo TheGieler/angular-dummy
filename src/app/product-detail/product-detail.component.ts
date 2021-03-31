@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { products } from '../products';
 
@@ -13,8 +14,13 @@ export class ProductDetailComponent implements OnInit {
   product;
 
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private location: Location
   ) { }
+
+  backClicked(): void {
+    this.location.back();
+  }
 
   ngOnInit(): void {
     // First get the product id from the current route.
