@@ -9,9 +9,11 @@ import { Product } from './products';
 })
 export class CartService {
 
-  items = [];
+  constructor(
+  private http: HttpClient
+  ) { }
 
-  private http = HttpClient;
+  items = [];
 
   addToCart(product): void{
     this.items.push(product);
@@ -25,6 +27,4 @@ export class CartService {
     this.items = [];
     return this.items;
   }
-
-  constructor() { }
 }
