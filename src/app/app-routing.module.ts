@@ -8,12 +8,12 @@ import { ShippingComponent } from './shipping/shipping.component';
 const routes: Routes = [
   { path: '', component: ProductListComponent },
   { path: 'products/:productId', component: ProductDetailComponent },
-  {path: 'cart', component: CartComponent },
-  {path: 'shipping', component: ShippingComponent }
+  { path: 'cart', component: CartComponent },
+  { path: 'shipping', component: ShippingComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
